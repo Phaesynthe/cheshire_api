@@ -1,0 +1,45 @@
+{
+  "name": "cheshire",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Form dialogue engine prototype",
+  "keywords": [],
+  "dependencies": {
+    "async": "2.0.1",
+    "grunt": "1.0.1",
+    "lodash": "3.10.1",
+    "sails": "^1.0.0-30",
+    "sails-hook-orm": "^2.0.0-0",
+    "sails-hook-sockets": "^1.0.1",
+    "sails-hook-grunt": "^1.0.4",
+    "sails-mysql": "^1.0.0-8",
+    "socket.io-redis": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "expect": "^1.20.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  },
+  "engines": {
+    "node": "6.x",
+    "npm": "4.x"
+  },
+  "scripts": {
+    "build": "webpack",
+    "debug": "node debug ./api.js",
+    "lint": "npm run lint:js && npm run lint:sass",
+    "lint:js": "eslint ./ui_src",
+    "lint:sass": "sass-lint ./ui_src/**/*.scss -v -q",
+    "start": "node app.js",
+    "test": "npm run test:integration & npm run lint",
+    "test:integration": "istanbul cover _mocha tests/integration.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mwj8410/cheshire.git"
+  },
+  "author": "Matthew W. Jackson <mwj8410@gmail.com>",
+  "license": ""
+}
