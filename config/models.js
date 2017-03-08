@@ -2,6 +2,7 @@
 
 module.exports.models = {
   migrate: 'safe',
+  datastore: 'mysql',
   attributes: {
     createdAt: {
       type: 'number',

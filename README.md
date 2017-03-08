@@ -1,6 +1,18 @@
-# Cheshire
+# Cheshire API #
 
-A [Sails](http://sailsjs.com) application
+## Environment Requirements ##
 
-### Links
-# cheshire_api
+* DB_MYSQL_URL
+* DB_MYSQL_URL
+* DB_MYSQL_USER
+* DB_MYSQL_PASSWORD
+
+## Recommended Development ##
+```
+docker pull mongo
+docker pull mysql
+docker pull redis
+docker run mongo
+docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
+docker run redis
+```

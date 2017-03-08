@@ -1,110 +1,15 @@
-/**
- * Production environment settings
- * (sails.config.*)
- *
- * What you see below is a quick outline of the built-in settings you need
- * to configure your Sails app for production.  The configuration in this file
- * is only used in your production environment, i.e. when you lift your app using:
- *
- * ```
- * NODE_ENV=production node app
- * ```
- *
- * > If you're using git as a version control solution for your Sails app,
- * > this file WILL BE COMMITTED to your repository by default, unless you add
- * > it to your .gitignore file.  If your repository will be publicly viewable,
- * > don't add private/sensitive data (like API keys / db passwords) to this file!
- *
- * For more best practices and tips, see:
- * http://sailsjs.com/docs/concepts/deployment
- */
 
 module.exports = {
-
-
-  /**************************************************************************
-  *                                                                         *
-  * Tell Sails what database(s) it should use in production.                *
-  *                                                                         *
-  * (http://sailsjs.com/config/datastores)                                  *
-  *                                                                         *
-  **************************************************************************/
   datastores: {
-
-    /***************************************************************************
-    *                                                                          *
-    * Configure your default production database.                              *
-    *                                                                          *
-    * 1. Choose an adapter:                                                    *
-    *    http://sailsjs.com/plugins/databases                                  *
-    *                                                                          *
-    * 2. Install it as a dependency of your Sails app.                         *
-    *    (For example:  npm install sails-mysql --save)                        *
-    *                                                                          *
-    * 3. Then pass it in, along with a connection URL.                         *
-    *    (See http://sailsjs.com/config/datastores for help.)                  *
-    *                                                                          *
-    ***************************************************************************/
     default: {
       // adapter: require('sails-mysql'),
       // url: 'mysql://user:password@host:port/database',
     },
-    //--------------------------------------------------------------------------
-    //  /\   To avoid checking it in to version control, you might opt to set
-    //  ||   sensitive credentials like `url` using an environment variable.
-    //
-    //  For example:
-    //  ```
-    //  sails_datastores__default__url=mysql://admin:myc00lpAssw2D@db.example.com:3306/my_prod_db
-    //  ```
-    //--------------------------------------------------------------------------
-
   },
 
-
-
-  models: {
-
-    /**************************************************************************
-    *                                                                         *
-    * To help avoid accidents, Sails automatically sets the automigration     *
-    * strategy to "safe" when your app lifts in production mode.              *
-    * (This is just here as a reminder.)                                      *
-    *                                                                         *
-    * More info:                                                              *
-    * http://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
-    *                                                                         *
-    ***************************************************************************/
-    migrate: 'safe',
-
-  },
-
-
-
-  /**************************************************************************
-  *                                                                         *
-  * Always disable "shortcut" blueprint routes.                             *
-  * (you'll also want to disable any other blueprint routes that you are    *
-  * not actually using)                                                     *
-  *                                                                         *
-  ***************************************************************************/
   blueprints: {
     shortcuts: false,
-    // actions: false,
-    // rest: false,
   },
-
-  /***************************************************************************
-  *                                                                          *
-  * Configure your security settings for production.                         *
-  *                                                                          *
-  * IMPORTANT:                                                               *
-  * If web browsers will be communicating with your app, be sure that        *
-  * you have CSRF protection enabled.  To do that, set `csrf: true` over     *
-  * in the `config/security.js` file (not here), so that CSRF app can be     *
-  * tested with CSRF protection turned on in development mode too.           *
-  *                                                                          *
-  ***************************************************************************/
   security: {
 
     /***************************************************************************
@@ -125,18 +30,6 @@ module.exports = {
     },
 
   },
-
-
-  /***************************************************************************
-  *                                                                          *
-  * Configure how your app handles sessions in production.                   *
-  *                                                                          *
-  * (http://sailsjs.com/config/session)                                      *
-  *                                                                          *
-  * > If you have disabled the "session" hook, then you can safely remove    *
-  * > this section from your `config/env/production.js` file.                *
-  *                                                                          *
-  ***************************************************************************/
   session: {
 
     /***************************************************************************
