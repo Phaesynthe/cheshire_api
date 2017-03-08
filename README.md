@@ -1,4 +1,4 @@
-# Cheshire API #
+# Cheshire API [![CircleCI](https://circleci.com/gh/Phaesynthe/cheshire_api.svg?style=svg)](https://circleci.com/gh/Phaesynthe/cheshire_api) #
 
 ## Environment Requirements ##
 
