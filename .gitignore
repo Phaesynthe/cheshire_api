@@ -1,8 +1,7 @@
-.tmp
-
-config/local.js
-
-node_modules
+/.tmp
+/config/local.js
+/coverage
+/node_modules
 
 
 
@@ -22,10 +21,6 @@ lib-cov
 *.pid
 npm-debug.log
 
-
-
-
-
 ################################################
 # Miscellaneous
 #
@@ -38,8 +33,7 @@ npm-debug.log
 .DS_STORE
 .netbeans
 nbproject
-.editorconfig
+
 .idea
 .node_history
 dump.rdb
-

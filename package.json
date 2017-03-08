@@ -18,9 +18,11 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
+    "eslint": "^3.17.1",
     "expect": "^1.20.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
   },
   "engines": {
     "node": "6.x",
@@ -29,12 +31,11 @@
   "scripts": {
     "build": "webpack",
     "debug": "node debug ./api.js",
-    "lint": "npm run lint:js && npm run lint:sass",
-    "lint:js": "eslint ./ui_src",
-    "lint:sass": "sass-lint ./ui_src/**/*.scss -v -q",
+    "lint": "eslint ./api",
+    "posttest": "npm run lint",
     "start": "node app.js",
-    "test": "npm run test:integration & npm run lint",
-    "test:integration": "istanbul cover _mocha tests/integration.config.js"
+    "test": "npm run test:integration",
+    "test:integration": "istanbul cover _mocha -- tests/integration.config.js tests/**/*.js --timeout 30000"
   },
   "repository": {
     "type": "git",
