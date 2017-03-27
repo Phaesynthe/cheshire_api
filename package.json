@@ -5,15 +5,13 @@
   "description": "Form dialogue engine prototype",
   "keywords": [],
   "dependencies": {
-    "async": "2.0.1",
-    "grunt": "1.0.1",
-    "lodash": "3.10.1",
-    "sails": "^1.0.0-30",
-    "sails-hook-orm": "^2.0.0-0",
-    "sails-hook-sockets": "^1.0.1",
-    "sails-hook-grunt": "^1.0.4",
-    "sails-mysql": "^1.0.0-8",
-    "socket.io-redis": "^1.0.0"
+    "async": "^2.0.1",
+    "body-parser": "^1.17.1",
+    "colors": "^1.1.2",
+    "express": "^4.15.2",
+    "lodash": "^3.10.1",
+    "mysql": "^2.13.0",
+    "uuid": "^2.0.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -29,13 +27,12 @@
     "npm": "4.x"
   },
   "scripts": {
-    "build": "webpack",
-    "debug": "node debug ./api.js",
-    "lint": "eslint ./api",
+    "launch": "./node_modules/.bin/functions",
+    "lint": "eslint ./test",
     "posttest": "npm run lint",
-    "start": "node app.js",
-    "test": "npm run test:integration",
-    "test:integration": "istanbul cover _mocha -- tests/integration.config.js tests/**/*.js --timeout 30000"
+    "start": "node ./api/api.js",
+    "test": "npm run test:unit",
+    "test:unit": "istanbul cover _mocha -- tests/unit.config.js tests/**/*.js --timeout 30000"
   },
   "repository": {
     "type": "git",
