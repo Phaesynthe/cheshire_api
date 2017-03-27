@@ -11,7 +11,9 @@ try {
   // Overwrite production with local config values where present
   let localTemplateConfig = require('../config/local.config');
   config = Object.assign(config, localTemplateConfig);
-} catch (ex) {}
+} catch (ex) {
+  log.error('API', 'main', 'configuration failed.');
+}
 
 log.info('API', 'main', 'startup sequence beginning.');
 

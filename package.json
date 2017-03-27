@@ -28,11 +28,10 @@
   },
   "scripts": {
     "launch": "./node_modules/.bin/functions",
-    "lint": "eslint ./test",
+    "lint": "eslint ./api",
     "posttest": "npm run lint",
     "start": "node ./api/api.js",
-    "test": "npm run test:unit",
-    "test:unit": "istanbul cover _mocha -- tests/unit.config.js tests/**/*.js --timeout 30000"
+    "test": "istanbul cover _mocha -- tests/test.config.js tests/**/*.js --timeout 30000"
   },
   "repository": {
     "type": "git",
